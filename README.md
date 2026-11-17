@@ -1,55 +1,49 @@
-# directorio_dolores
+# Directorio Dolores Hidalgo: TDD y API
 
-# Directorio Dolorense: consumo de API local con TDD
+## 1. Servidor API
 
-
-## Ronda 1: La API (la cocina)
-
-Servidor encendido:
+Encendido: el servidor local en Node.js inicia y queda listo para recibir peticiones.
 
 ![Servidor encendido](assets/R1_01_servidor_encendido.png)
 
+---
 
-## Ronda 2: Modelo Negocio (TDD)
+## 2. Modelo Negocio
 
-Rojo: la prueba falla porque `negocio.dart` no existe.
+Rojo: la prueba falla porque la lógica o clase `Negocio` todavía no cumple con lo esperado.
 
-![Rojo Negocio](assets/R2_01_rojo_negocio_test.png)
+![Negocio rojo](assets/R2_01_rojo_negocio_test.png)
 
-Verde: se crea el modelo y las 4 pruebas pasan.
+Verde: se implementa `Negocio` y la prueba pasa.
 
-![Verde Negocio](assets/R2_02_verde_negocio_test.png)
-
-Estructura de la capa de dominio:
-
-![Estructura dominio](assets/R2_03_estructura_dominio.png)
+![Negocio verde](assets/R2_02_verde_negocio_test.png)
 
 ---
 
-## Ronda 3: Cliente HTTP con MockClient (TDD)
+## 3. Conexión y Pruebas de API
 
-Rojo: la prueba de `listar` falla porque `negocios_api.dart` no existe.
+Rojo: la prueba de integración con la API falla.
 
-![Rojo API](assets/R3_01_rojo_api_test.png)
+![API rojo](assets/R3_01_rojo_api_test.png)
 
-Verde: `listar` funciona.
+Verde: se conecta correctamente con los endpoints y la prueba pasa.
 
-![Verde API](assets/R3_02_verde_api_test.png)
+![API verde](assets/R3_02_verde_api_test.png)
 
-Casos de falla (500, sin red, timeout y JSON roto):
+### Casos de falla
 
-![Casos de falla](assets/R3_03_verde_casos_falla.png)
+Verde: se manejan los errores del servidor (como respuestas 500 o sin conexión) y la prueba pasa.
 
-Búsqueda, crear y eliminar:
-
-![Crear, buscar y eliminar](assets/R3_04_verde_crear_buscar_eliminar.png)
-
-Reto: prueba de `actualizar()` con PUT:
-
-![Reto PUT](assets/R3_05_verde_reto_put.png)
+![Casos de falla verde](assets/R3_03_verde_casos_falla.png)
 
 ---
 
-## Ronda 4 en adelante
+## 4. Secuencia de Estados (ViewModel)
 
-(Se completa en los siguientes pasos.)
+Rojo: la prueba de la secuencia de estados (cargando, error, datos) falla.
+
+![Secuencia de estados rojo](assets/R5_01_rijo_secuencia_estatos.png)
+
+Verde: se implementa la gestión de estados en el ViewModel y la prueba pasa.
+
+![Secuencia de estados verde](assets/R06_02_verde_secuencia_estatos.png)
