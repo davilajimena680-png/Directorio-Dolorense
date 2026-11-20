@@ -50,3 +50,18 @@ Verde: se implementa la gestión de estados en el ViewModel y la prueba pasa.
 
 ---
 
+## Pantallas funcionando
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>Captura 1</strong><br>
+      <img src="https://github.com/user-attachments/assets/1b85e9e8-ab56-4c47-8d01-1947dc80945e" width="250">
+    </td>
+    <td align="center">
+      <strong>Captura 2</strong><br>
+      <img src="https://github.com/user-attachments/assets/ced572d3-3786-4465-b0a7-5613c7890c86" width="250">
+    </td>
+  </tr>
+</table>
+
