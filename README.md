@@ -47,3 +47,6 @@ Rojo: la prueba de la secuencia de estados (cargando, error, datos) falla.
 Verde: se implementa la gestión de estados en el ViewModel y la prueba pasa.
 
 ![Casos de falla verde](assets/R3_03_verde_casos_falla.png)
+
+---
+
